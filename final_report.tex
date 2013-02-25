@@ -1,0 +1,93 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{verbatim}
+
+% Hypertext
+\usepackage{hyperref}
+
+%Bibliobraphy
+\usepackage{natbib}
+\usepackage{bibtopic}
+\usepackage{url}
+
+\usepackage[utf8]{inputenc} % Krävs för att svenska tecken ska läsas korrekt i vissa system.
+%\usepackage[latin1]{inputenc} % Om svenska tecken inte fungerar korrekt, försök att byta ut föregående rad mot denna (eller testa utan någon av raderna)
+
+%Allow the use of \verbatimtabinput which includes external files, and handling tabs correctly
+\usepackage{moreverb}
+\def\verbatimtabsize{4\relax} 
+
+\bibliographystyle{unsrt}
+
+%Remove red boxes due to the hyperref
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{ETS200 -- Group K\\--\\ Final Report \\
+How can web applications be tested?
+%TODO maybe add a better title
+}
+
+\author{Fernando de Andrade Pereira
+\\Jesper Bonna
+\\Sadat Tokhi
+%TODO put your full names, guys
+}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\clearpage
+
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+\setcounter{page}{1}
+
+\section{Strategies for testing web applications}
+%TODO An explanation of current strategies for testing web applications.
+
+\subsection{White box strategy}
+%TODO
+
+\subsection{Black box strategy}
+%TODO
+
+\subsection{Gray box strategy}
+%TODO
+
+\subsection{When is which strategy most applicable?}
+%TODO An analysis of the strategies named above.
+
+\section{Tools for testing web applications}
+%TODO Common tools for testing web based applications. When is each tool most useful?
+
+\section{Case studies}
+%TODO Fernando: Which cases have been studied? Which technics have been applied? How can the results be evaluated?
+
+\section{Major problems with web-based testing today}
+%TODO There is a lot of problems with web based testing today. Mostly it’s too time consuming and developers doesn’t have the time to test before release.
+
+\section{What does the future hold?}
+%TODO How can strategies and method
+
+\newpage
+\appendix
+
+\begin{btSect}[alpha]{literature}
+\section{References}
+\btPrintAll
+\end{btSect}
+
+\end{document}
