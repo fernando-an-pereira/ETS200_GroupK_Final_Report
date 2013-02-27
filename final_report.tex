@@ -5,6 +5,9 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{verbatim}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{5}   
+\setcounter{tocdepth}{5} 
 
 % Hypertext
 \usepackage{hyperref}
@@ -75,6 +78,34 @@ How can web applications be tested?
 
 \section{Case studies}
 %TODO Fernando: Which cases have been studied? Which technics have been applied? How can the results be evaluated?
+
+\subsection{AJAX web applications \cite{mtr08}}
+AJAX is a technology that can be used to develop Rich Internet Applications.
+Since it use assynchronous messages between client and server and it allows dynamic page alteration in a different way than the multipage Web paradigm, it introduces new chalenges to the testing of these web applications.
+
+\subsubsection{Techniques}
+
+\paragraph{State-based testing}
+
+The autors of the paper \cite{mtr08} propose a state-based testing technique.
+Using AJAX, the state of the elements in the client-side can change dynamically.
+A \emph{state} is considered a possible instance of the DOM in a Web page, i.e., it's characterized by the HTML elements.
+
+A finite state machine describes the the behavior of the Web page, containing the states (equivalence classes can be used to reduce the total number of states) and the transitions, related to methods triggered by GUI events -- interations with the user, like button clicks -- and \emph{callback} functions -- tht happen when the page receive a response from ther server.
+
+The method consists in: 
+
+\begin{enumerate}
+\item \emph{FSM construcion}. The FSM that models a AJAX Web page an be constructed during the design phase or can be reverse enginnered from the code.
+\item \emph{Path extraction}. One coverage criteria (states or transitions coverage) is chosen and the paths are extracted from the FSM according to it.
+\item \emph{Test cases generation}. Each path is converted into a test case.
+\item \emph{Test cases execution}. A tool that works in HTTP request-response level is used execute the test. cases
+\end{enumerate}
+
+\subsubsection{Experiments}
+
+\subsection{•}
+%TODO find another article about testing
 
 \section{Major problems with web-based testing today}
 %TODO There is a lot of problems with web based testing today. Mostly it’s too time consuming and developers doesn’t have the time to test before release.
