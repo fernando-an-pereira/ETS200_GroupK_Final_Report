@@ -84,10 +84,29 @@ AJAX is a technology that can be used to develop Rich Internet Applications.
 Since it use assynchronous messages between client and server and it allows dynamic page alteration in a different way than the multipage Web paradigm, it introduces new chalenges to the testing of these web applications.
 
 \subsubsection{Techniques}
+In the paper, four Web application testing techniques are introduced: \emph{model-based}, \emph{code-coverage-based}, \emph{black box} -- three tradicional Web applications testing techniques -- and \emph{state-based} -- this last one proposed as more adequate to handle with AJAX applications.
+
+\paragraph{Model-based testing}
+
+is a \emph{white box} testing technique.
+A model of the application is constructed using reverse engineering and Web crawling technique -- a program that automatically transverses the Web's hyperlink structure, retrieving the content of the Web pages.
+It generates a graph where the nodes represent pages and edges represent links.
+The test cases will be defined chosing a coverage criteria and applying to this model. 
+
+\paragraph{Code-coverage-based testing} 
+
+is another \emph{white box} testing technique. 
+It uses a control flow model of the application where nodes represent statements execute by the Web server or by the client and edges represent control transfer.
+Theoretically, it can be use to test a AJAX Web application, but due to the complexity and dynamism of AJAX Web pages, this technique is very limited for this use.
+
+\paragraph{Black box testing} 
+
+uses functional requirements of the application to define test cases, i.e., scenarios that can be accomplished by a Web visitor through the browser.
 
 \paragraph{State-based testing}
 
-The autors of the paper \cite{mtr08} propose a state-based testing technique.
+is proposed by the autors of the paper as a more efficient way of test a AJAX Web application.
+
 Using AJAX, the state of the elements in the client-side can change dynamically.
 A \emph{state} is considered a possible instance of the DOM in a Web page, i.e., it's characterized by the HTML elements.
 
@@ -103,6 +122,16 @@ The method consists in:
 \end{enumerate}
 
 \subsubsection{Experiments}
+
+The experiment consists in use the four testing techniques introduced to test two diffentent Web applications composed of Java, JSP and Javascript code -- \emph{Photoshare} and \emph{the Organizer}.
+
+\paragraph{Preparation and procedure}
+
+
+
+\paragraph{Results and conclusion}
+
+
 
 \subsection{•}
 %TODO find another article about testing
