@@ -123,17 +123,58 @@ The method consists in:
 
 \subsubsection{Experiments}
 
-The experiment consists in use the four testing techniques introduced to test two diffentent Web applications composed of Java, JSP and Javascript code -- \emph{Photoshare} and \emph{the Organizer}.
+The experiment consists in use the four testing techniques introduced to test two diffentent Web applications composed of Java, JSP and Javascript code -- \emph{Photoshare} and \emph{theOrganizer}.
 
 \paragraph{Preparation and procedure}
 
+To test the \emph{effectiveness} of each technique, and the \emph{effort} demanded by them, faults are injected in the code of both applications (seven faults in \emph{Photoshare} and nine in \emph{theOrganizer}).
+These faults try to simulate bugs commonly found in real applications and are introduced by a person different than the tester.
 
+For each testing technique, a suite of test cases is defined.
+This test cases suites are applied using following metrics:
+
+\begin{itemize}
+
+\item To test \emph{effectiveness}:
+\begin{itemize}
+\item number of faults revealed;
+\item number of use cases exercised;
+\item severity of faults -- the person who injected the faults determine each one as \emph{severe} or \emph{not severe} according to the potential tha it has to crash the system;
+\item number of faults with high degree of relation with AJAX technology.
+\end{itemize}
+
+\item To test \emph{effort}:
+\begin{itemize}
+\item number of test cases in the suite;
+\item complexity of the whole suite;
+\item time needed (\emph{man-hours}) to prepate the testing environment.
+\end{itemize}
+
+\end{itemize} 
 
 \paragraph{Results and conclusion}
 
+The \emph{state-based} and the \emph{blak box} techniques found thirteen faults each, and were the better techniques in this criterion.
+However all the techniques seens to be complementary, since they find different errors in the systems.
 
+As expected, the \emph{black box} technique is the one that covered more use cases, but not the whole set.
+It covers 91\% of the total of use cases.
 
-\subsection{•}
+Eight of the total number of fault were considered \emph{severe}. Again, \emph{black box} testing and \emph{state-based} testing had the better results, finding 75\% of the \emph{severe} faults each.
+
+There were eight \emph{AJAX related} faults among the total number of errors. 
+\emph{State-based} testing found 75\% of these bugs, and was the better than the other techniques in this metric.
+
+It's possible to conclude that the traditional techniques and \emph{state-based} testing are complementaries.
+The \emph{state-based} testing is more likely to find errors related to AJAX, other techniques will work better with other kind of errors.
+
+The \emph{state-based} testing is not the technique with the largest test cases suite (it has 78 test cases, against 111 of the \emph{code-coverage-based}, 93 of the \emph{black box} and 61 of the \emph{model-based}).
+However it had the test suite with the biggest complexity in average and by far the technique that demands more time of preparation of the testing environment.
+
+Summing up, although the \emph{state-based} testing technique demands a effort bigger than the traditional testing techniques, only it can reveal some faults related to the AJAX technology, due to be the only one that focuses it.
+The traditional techniques, nevertheless can be used as complement to the proposed one, since they found errors that are difficult to find using \emph{state-based} testing.
+
+\subsection{TODO}
 %TODO find another article about testing
 
 \section{Major problems with web-based testing today}
