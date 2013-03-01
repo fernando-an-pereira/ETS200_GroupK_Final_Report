@@ -3,7 +3,6 @@
 \usepackage[english]{babel}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage{url}
 \usepackage{verbatim}
 \usepackage{titlesec}
 \setcounter{secnumdepth}{5}   
@@ -87,107 +86,92 @@ How can web applications be tested?
  \item Link checkers 
  \item Html validators 
  \item Web site security check tools 
- \item Mobile/Web app testing tools 
+ \item Mobile/Web app testing tools
+ \end {itemize}
  
+We have chosen one web testing tool in each category and they are presented in the same order as their categories. 
+The tools were picked in a random manner and where in no way picked due to their performance in their respective area.
  
+First up is a tool called\emph {Agileload} from Agile Load SA. Agileload is used for testing all web and mobile applications.
+With Agileload the user can create different scenarios simulating heavy traffic in order to test the performance of the
+application/website. Another feature of Agileload is its topological and thresholds analysis. These features are helpful 
+in pinpointing the origin of anomalies. There are many more features to Agileload that the user can take benefit from.
+Agileload is very versatile since
+it supports
+applications
+running J2EE,
+Ajax, Adobe Air-Flex, Silverlight, Sharepoint, JSON, 
+Web services, SOAP, Apache, IIS, Web sphere, Jboss, Oracle, SQLServer, MySQL, DB2, SAP Web, Siebel, PeopleSoft, Hyperion, 
+Citrix and
+many more \cite{agileload}.
  
- We have chosen one web testing tool in each category and they are presented in the same order as their categories. 
- The tools were picked in a random manner and where in no way picked due to their performance in their respective area.
+Next up is \emph{Autopilot Heap Detective} from Nastel technologies.
+AHD is a free tool that's used for analyzing and detecting 
+memory leaks in the java heap. It simply holds track of all objects on the heap and reports anomalies in the memory. \cite{ahd}
  
- First up is a tool called\emph {Agileload} from Agile Load SA. Agileload is used for testing all web and mobile applications.
- With Agileload the user can create different scenarios simulating heavy traffic in order to test the performance of the
- application/website. Another feature of Agileload is its topological and thresholds analysis. These features are helpful 
- in pinpointing the origin of anomalies. There are many more features to Agileload that the user can take benefit from. 
- Agileload is very versatile since it supports applications running J2EE, Ajax, Adobe Air-Flex, Silverlight, Sharepoint,  JSON, Web services, SOAP, Apache, IIS, Web sphere, Jboss, Oracle, SQLServer, MySQL, DB2, SAP Web, Siebel, PeopleSoft, Hyperion, Citrix and many more. [1] 
+The next tool is \emph{LinkScan} from Electronic Software Publishing Co. The name reveals this tools main objective. It scans all 
+links in an application/website and searches for broken/bad links and stores the results in a report in a database that the 
+user can access in order to follow up and repair these links. \cite{links} 
  
- Next up is \emph {Autopilot Heap Detective} from Nastel technologies. AHD is a free tool that´s used for analyzing and detecting 
- memory leaks in the java heap. It simply holds track of all objects on the heap and reports anomalies in the memory. [2] 
- 
- The next tool is \emph {LinkScan} from Electronic Software Publishing Co. The name reveals this tools main objective. It scans all 
- links in an application/website and searches for broken/bad links and stores the results in a report in a database that the 
- user can access in order to follow up and repair these links. [3] 
- 
- \emph {Total Validator} is used for validating html and xhtml against the W3C CSS Standards [4]. Other features are searching 
- for broken links and spellchecking. The spellchecker covers the following languages. American English, British English,
- French, Italian, Spanish and German.[5] 
- 
- \emph {SkipFish} is a web security tool from Michael Zalewski/Google. It´s main purpose is scanning websites/applications for 
- security threats of all measures and helping the user to prevent against these threats. [6] 
- 
- The last tool to be presented is\emph {MobiTest} from Mobile Performance Testing Tools.  With Mobitest the user can test the 
- performance of their website by browsing it on mobile devices from different locations. The test data returns information 
- on the site’s load time, bandwidth, charts, pictures and optionally video footage of the site. [7] 
- 
- 
- As we mentioned before, categorizing web testing tools is hard. And from just these few examples that we just presented 
- one can see that this is true. Many of the web testing tools are multifunctional and can be used for different kinds of 
- tests. But still it seems as if just one tool won’t be sufficient for a user to fully test a website/application for all 
- types of errors and bugs that can arise. Maybe this is because of the broad variety in styles, forms and different coding 
- languages in modern day’s websites/applications.  Testing websites /applications is hard since there are so many inputs 
- and outputs to handle, and many of today’s websites are dynamic pages, meaning that there are different inputs and outputs 
- for different users making it harder for the developers of web testing tools to create a tool that can cover all error checking.
-  
- Many of the web testing tools has the ability to set up and perform automated test cases, but this is mainly for tests 
- concerning issues like checking for broken /bad links, simulating heavy traffic, testing a websites/applications load 
- time, spellchecking etc. When it comes to test cases concerning interaction between a user and a website/application 
- the user has to set up manual test cases.  
-  
- So in conclusion we would say that to fully test a website/application you would need more than a single tool. And even then 
- there is no guarantee that it’s foolproof.  But for the average user the combination of using one or a few tools is 
- sufficient to make their website/application somewhat error free and optimized. In the future there is a demand for tools 
- that has greater support for testing dynamic websites/applications and tools with greater support for automated test cases.  
- For the interested reader there is a website listing and linking to over 200 web testing tools amongst others the ones that
- we have presented.[8] 
-   
-   
-       1 http://www.agileload.com/ 
-       2 http://www.nastel.com/products/free-software/autopilot-heap-detective-detect-java-memory-leaks.html  
-       3 http://www.elsop.com/   
-       4 http://www.w3.org/Style/CSS/ 
-       5 http://totalvalidator.com/ 
-       6 https://code.google.com/p/skipfish/ 
-       7 http://mobitest.akamai.com/m/index.cgi 
-       8 http://www.softwareqatest.com/qatweb1.html 
-       
-       
-        
-        
-        
-         
-         
-         
-          
-          
+\emph {Total Validator} is used for validating html and xhtml against the W3C CSS Standards \cite{w3}. Other features are searching 
+for broken links and spellchecking. The spellchecker covers the following languages. American English, British English,
+French, Italian, Spanish and German.\cite{totval} 
 
+\emph {SkipFish} is a web security tool from Michael Zalewski/Google. It's main purpose is scanning websites/applications for 
+security threats of all measures and helping the user to prevent against these threats. \cite{skipfish}
+ 
+The last tool to be presented is\emph {MobiTest} from Mobile Performance Testing Tools.  With Mobitest the user can test the 
+performance of their website by browsing it on mobile devices from different locations. The test data returns information 
+on the site’s load time, bandwidth, charts, pictures and optionally video footage of the site. \cite{mobitest} 
+ 
+ 
+As we mentioned before, categorizing web testing tools is hard. And from just these few examples that we just presented 
+one can see that this is true. Many of the web testing tools are multifunctional and can be used for different kinds of 
+tests. But still it seems as if just one tool won’t be sufficient for a user to fully test a website/application for all 
+types of errors and bugs that can arise. Maybe this is because of the broad variety in styles, forms and different coding 
+languages in modern day’s websites/applications.  Testing websites /applications is hard since there are so many inputs 
+and outputs to handle, and many of today’s websites are dynamic pages, meaning that there are different inputs and outputs 
+for different users making it harder for the developers of web testing tools to create a tool that can cover all error hecking.
+  
+Many of the web testing tools has the ability to set up and perform automated test cases, but this is mainly for tests 
+concerning issues like checking for broken /bad links, simulating heavy traffic, testing a websites/applications load 
+time, spellchecking etc. When it comes to test cases concerning interaction between a user and a website/application 
+the user has to set up manual test cases.   
+ 
+So in conclusion we would say that to fully test a website/application you would need more than a single tool. And even then 
+there is no guarantee that it’s foolproof.  But for the average user the combination of using one or a few tools is 
+sufficient to make their website/application somewhat error free and optimized. In the future there is a demand for tools 
+that has greater support for testing dynamic websites/applications and tools with greater support for automated test cases.  
+For the interested reader there is a website listing and linking to over 200 web testing tools amongst others the ones that
+we have presented. \cite{softqa}
 
-\section{Case studies}
+\section{Case studie: AJAX web applications \cite{mtr08}}
 %TODO Fernando: Which cases have been studied? Which technics have been applied? How can the results be evaluated?
 
-\subsection{AJAX web applications \cite{mtr08}}
 AJAX is a technology that can be used to develop Rich Internet Applications.
 Since it use assynchronous messages between client and server and it allows dynamic page alteration in a different way than the multipage Web paradigm, it introduces new chalenges to the testing of these web applications.
 
-\subsubsection{Techniques}
-In the paper, four Web application testing techniques are introduced: \emph{model-based}, \emph{code-coverage-based}, \emph{black box} -- three tradicional Web applications testing techniques -- and \emph{state-based} -- this last one proposed as more adequate to handle with AJAX applications.
+\subsection{Techniques}
+In the paper \cite{mtr08}, four Web application testing techniques are introduced: \emph{model-based}, \emph{code-coverage-based}, \emph{black box} -- three tradicional Web applications testing techniques -- and \emph{state-based} -- this last one proposed as more adequate to handle with AJAX applications.
 
-\paragraph{Model-based testing}
+\subsubsection{Model-based testing}
 
 is a \emph{white box} testing technique.
 A model of the application is constructed using reverse engineering and Web crawling technique -- a program that automatically transverses the Web's hyperlink structure, retrieving the content of the Web pages.
 It generates a graph where the nodes represent pages and edges represent links.
 The test cases will be defined chosing a coverage criteria and applying to this model. 
 
-\paragraph{Code-coverage-based testing} 
+\subsubsection{Code-coverage-based testing} 
 
 is another \emph{white box} testing technique. 
 It uses a control flow model of the application where nodes represent statements execute by the Web server or by the client and edges represent control transfer.
 Theoretically, it can be use to test a AJAX Web application, but due to the complexity and dynamism of AJAX Web pages, this technique is very limited for this use.
 
-\paragraph{Black box testing} 
+\subsubsection{Black box testing} 
 
 uses functional requirements of the application to define test cases, i.e., scenarios that can be accomplished by a Web visitor through the browser.
 
-\paragraph{State-based testing}
+\subsubsection{State-based testing}
 
 is proposed by the autors of the paper as a more efficient way of test a AJAX Web application.
 
@@ -205,11 +189,11 @@ The method consists in:
 \item \emph{Test cases execution}. A tool that works in HTTP request-response level is used execute the test. cases
 \end{enumerate}
 
-\subsubsection{Experiments}
+\subsection{Experiments}
 
 The experiment consists in use the four testing techniques introduced to test two diffentent Web applications composed of Java, JSP and Javascript code -- \emph{Photoshare} and \emph{theOrganizer}.
 
-\paragraph{Preparation and procedure}
+\subsubsection{Preparation and procedure}
 
 To test the \emph{effectiveness} of each technique, and the \emph{effort} demanded by them, faults are injected in the code of both applications (seven faults in \emph{Photoshare} and nine in \emph{theOrganizer}).
 These faults try to simulate bugs commonly found in real applications and are introduced by a person different than the tester.
@@ -236,7 +220,7 @@ This test cases suites are applied using following metrics:
 
 \end{itemize} 
 
-\paragraph{Results and conclusion}
+\subsubsection{Results and conclusion}
 
 The \emph{state-based} and the \emph{blak box} techniques found thirteen faults each, and were the better techniques in this criterion.
 However all the techniques seens to be complementary, since they find different errors in the systems.
@@ -257,9 +241,6 @@ However it had the test suite with the biggest complexity in average and by far 
 
 Summing up, although the \emph{state-based} testing technique demands a effort bigger than the traditional testing techniques, only it can reveal some faults related to the AJAX technology, due to be the only one that focuses it.
 The traditional techniques, nevertheless can be used as complement to the proposed one, since they found errors that are difficult to find using \emph{state-based} testing.
-
-\subsection{TODO}
-%TODO find another article about testing
 
 \section{Major problems with web-based testing today}
 %TODO There is a lot of problems with web based testing today. Mostly it’s too time consuming and developers doesn’t have the time to test before release.
