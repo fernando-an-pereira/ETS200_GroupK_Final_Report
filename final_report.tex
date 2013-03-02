@@ -57,20 +57,74 @@ How can web applications be tested?
 
 \setcounter{page}{1}
 
-\section{Strategies for testing web applications}
-%TODO An explanation of current strategies for testing web applications.
+\section{White box testing on Web application}
+The main idea with white box testing is to focus on the inner structure of the software \cite{ib03}. To do this
+a tester needs to have access to the code or a pseudo like functionality representation of the code. A
+coverage model is used to specify which parts of the code that needs to be tested. A commonly used
+test model is a Control Flow Graph, shown below [3]:
 
-\subsection{White box strategy}
-%TODO
+There are several different coverage models which serves different purposes \cite{ib03}. \emph{Statement coverage}
+is model which executes and tests all statements in the code. Here logical faults in loops and if-
+statements are often found. \emph{Condition coverage} tests all possible conditions, which covers the
+variables possible values. \emph{Branch coverage} tests all possible paths throughout the system. Even
+though the output might be the same for two executions it doesn’t necessarily have to take the same
+path, and something else can cause an issue along the way.
 
-\subsection{Black box strategy}
-%TODO
+To the code representation models that test Web applications, two main families of structural
+models have been practiced from theory \cite{dlf06}. One model focuses on the level of abstraction of
+single statements of code components of the application, and represents information about their
+control flow or data flow. The other “family” focuses on the granularity of the pages from the Web
+application and represents the navigation structure between pages of the application with some
+eventual added details. Two techniques are proposed below:
 
-\subsection{Gray box strategy}
-%TODO
+Liu et al.\cite{lkhh01} has proposed a technique that shows example of how data flow testing of Web
+applications can be carried out. The model can be used on applications implemented in HTML and
+XML languages. This model is based on a Web application test model called WATM, which includes
 
-\subsection{When is which strategy most applicable?}
-%TODO An analysis of the strategies named above.
+and Object model and a Structure model. The purpose of the Object model is to represent the
+ways that heterogeneous components are interconnected. There are three types of objects: client
+pages, server pages and components. Relationships between objects are inheritance, aggregation,
+association, request, response, navigation, and redirect. The first three have objected-oriented
+semantics while the rest have has specific relationships between client and server pages. The
+structural model uses four types of graph to cover various types of data flows of a Web application:
+a \emph{Control Flow Graph} (CFG) of an individual function, the \emph{Interprocedural Control Flow Graph} (ICFG),
+an \emph{Object Control Flow Graph} (OCFG), which integrates CFGs of object functions that are included in
+sequences that are triggered by GUI events, and there is the \emph{Composite Control Flow Graph} (CCFG)
+that covers the interaction between pages.
+
+The approach of data-flow testing folders test cases into three different categories, intra-object,
+inter-object and inter-client. These are then defined by five scopes of the testing level: Function,
+Function Cluster, Object, Object Cluster, and Application level.
+
+For the \emph{intra-object} perspective, test paths are selected for variables that have def-use chains within
+an object. The chains are computed using the control flow graphs of functions included in the object.
+The \emph{inter-object} test paths are selected for variables that have def-use chains across objects. Def-
+use chains have to be defined at the \emph{object cluster} level, where each cluster is composed by a set of
+message-passing objects. At last the \emph{inter-client} perspective derives test-paths on the basis of def-use
+chains of variables that span over multiple clients, since in a Web application a variable can be shared
+by multiple clients. This level of testing is called \emph{application} level.
+
+The relevance in this test technique lies in its potential to extend the field of how Web applications in
+the data flow testing approaches applicable to traditional software. Although its effectiveness is still
+not great, further investigation in this area needs to be done for developers to consider using it. Also
+there hasn’t been a validation including more than one example of Web application.
+
+The other technique from the second “family” described earlier has been introduced by Ricca and
+Tonella \cite{rt01}. The approach is based on HTML navigation links of the application. The same authors
+presented a model called the Control Flow Model, which represents the internal structure of Web
+pages where the execution flow is followed. This model has been used for structural testing as well.
+
+In this model a test case is defined as a sequence of Web pages to be visited and the input values to
+those pages with forms. This model includes branch coverage, path coverage and node coverage.
+
+A conclusion regarding these different tests is that they serve different purposes. Some tests are
+applicable at system integration level and other at a more detailed unit level. The first technique
+proposed by Liu et al is applicable at a wide spectrum of testing levels. The intra-object covers unit
+tests and the inter-object / inter-application covers the system integration. The Control Flow Model
+by Ricca and Tonella can only be used at system level. As a tester who needs to test both at unit level
+and system level the first model might have an advantage, since it is more practical sticking with one
+model. Although the controversiallity regarding this model is a disadvantage.
+
 
 \section{Tools for testing web applications}
 %TODO Common tools for testing web based applications. When is each tool most useful?
@@ -92,7 +146,7 @@ How can web applications be tested?
 We have chosen one web testing tool in each category and they are presented in the same order as their categories. 
 The tools were picked in a random manner and where in no way picked due to their performance in their respective area.
  
-First up is a tool called\emph {Agileload} from Agile Load SA. Agileload is used for testing all web and mobile applications.
+First up is a tool called \emph {Agileload} from Agile Load SA. Agileload is used for testing all web and mobile applications.
 With Agileload the user can create different scenarios simulating heavy traffic in order to test the performance of the
 application/website. Another feature of Agileload is its topological and thresholds analysis. These features are helpful 
 in pinpointing the origin of anomalies. There are many more features to Agileload that the user can take benefit from.
@@ -251,8 +305,15 @@ The traditional techniques, nevertheless can be used as complement to the propos
 \newpage
 \appendix
 
-\begin{btSect}[alpha]{literature}
 \section{References}
+
+\begin{btSect}[alpha]{literature}
+\subsection{Articles \& books}
+\btPrintAll
+\end{btSect}
+
+\begin{btSect}[alpha]{websites}
+\subsection{Websites}
 \btPrintAll
 \end{btSect}
 
