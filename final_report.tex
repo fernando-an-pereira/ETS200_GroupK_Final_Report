@@ -57,11 +57,23 @@ How can web applications be tested?
 
 \setcounter{page}{1}
 
+\section{Introduction}
+The World Wide Web has grown hugely in the last decades.
+Over the years, static Web pages have become obsolete and several Web \emph{applications} have arose.
+
+These Web application, as any other piece of software developed, shall be tested.
+Many traditional software testing techniques  -- as \emph{white box} or \emph{black box} -- have been used.
+However, these techniques are not completelly appropriate to test Web applicaton, due to dynamism of Web pages and communication between server and client sides.
+
+In this paper, we'll analyse the adaptations that have been done in the traditional techniques to apply them in new Web applications, the several existing tools do this testing, a comparative study between different techniques and a brief consideration about the present and future of Web application software testing.
+
 \section{White box testing on Web application}
 The main idea with white box testing is to focus on the inner structure of the software \cite{ib03}. To do this
 a tester needs to have access to the code or a pseudo like functionality representation of the code. A
 coverage model is used to specify which parts of the code that needs to be tested. A commonly used
 test model is a Control Flow Graph, shown below \cite{p91}:
+
+\includegraphics[scale=1]{fig.png} 
 
 There are several different coverage models which serves different purposes \cite{ib03}. \emph{Statement coverage}
 is model which executes and tests all statements in the code. Here logical faults in loops and if-
@@ -80,7 +92,6 @@ eventual added details. Two techniques are proposed below:
 Liu et al.\cite{lkhh01} has proposed a technique that shows example of how data flow testing of Web
 applications can be carried out. The model can be used on applications implemented in HTML and
 XML languages. This model is based on a Web application test model called WATM, which includes
-
 and Object model and a Structure model. The purpose of the Object model is to represent the
 ways that heterogeneous components are interconnected. There are three types of objects: client
 pages, server pages and components. Relationships between objects are inheritance, aggregation,
@@ -128,8 +139,6 @@ model. Although the controversiallity regarding this model is a disadvantage.
 
 \section{Tools for testing web applications}
 %TODO Common tools for testing web based applications. When is each tool most useful?
-
-
 
  The number of tools that are available online for websites/applications has increased significantly in the last few years. There are too many tools to try and list and analyze them all so we have chosen a few that we will present briefly and try to explain when each of these tools is most useful. 
  Categorizing web tools is hard since many of the tools can be listed in several of the categories. These are some of the categories for web testing tools.  
