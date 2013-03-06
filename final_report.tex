@@ -1,10 +1,11 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper, twocolumn]{ieee}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{verbatim}
 \usepackage{titlesec}
+\usepackage{float}
 \setcounter{secnumdepth}{5}   
 \setcounter{tocdepth}{5} 
 
@@ -15,6 +16,11 @@
 \usepackage{natbib}
 \usepackage{bibtopic}
 \usepackage{url}
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,library}
+
+
 
 \usepackage[utf8]{inputenc} % Krävs för att svenska tecken ska läsas korrekt i vissa system.
 %\usepackage[latin1]{inputenc} % Om svenska tecken inte fungerar korrekt, försök att byta ut föregående rad mot denna (eller testa utan någon av raderna)
@@ -51,6 +57,16 @@ How can web applications be tested?
 \thispagestyle{empty}
 \clearpage
 
+\begin{abstract}
+With the growth in the industry of Web applications, specifc software testing techniques have been developed. 
+However, it is facing a lot of challenges.
+
+This paper describes techniques, tools, experiments, and the present and future in testing Web applications. 
+
+\end{abstract}
+\thispagestyle{empty}
+\clearpage
+
 \tableofcontents
 \thispagestyle{empty}
 \clearpage
@@ -73,7 +89,14 @@ a tester needs to have access to the code or a pseudo like functionality represe
 coverage model is used to specify which parts of the code that needs to be tested. A commonly used
 test model is a Control Flow Graph, shown below \cite{p91}:
 
-\includegraphics[scale=1]{fig.png} 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{fig.png}
+	\caption{Simplified Control Flowgraph, Flowgraph with marked edges and Simplified Flowgraph with Looping}
+\end{figure}
+
+
 
 There are several different coverage models which serves different purposes \cite{ib03}. \emph{Statement coverage}
 is model which executes and tests all statements in the code. Here logical faults in loops and if-
@@ -309,6 +332,24 @@ The traditional techniques, nevertheless can be used as complement to the propos
 
 \subsection{Major problems with web-based testing today}
 %TODO There is a lot of problems with web based testing today. Mostly it’s too time consuming and developers doesn’t have the time to test before release.
+There are some factors that contributes to the difficulty of developing
+generic web testing tools that can be used for testing any kind of
+website/application and doing so without beeing to timeconsuming or
+errorprone. The fact that different developers have different testing
+strategies, there are different browsers, the wast range of programming
+languages available, the dynamic nature of many websites/applications and
+last but not least the unpredictable behavior of the users. 
+
+All these
+facts combined explains why web testing tools are not optimized, atleast
+not yet. Because of this testing websites/applications is timeconsuming
+since, in most cases, the user has to manualy setup test suits for
+different kinds of testing scenarios. Sometimes it's impossible to test
+all different testing scenarios due to the fact that there are so many
+combinations of inputs/outputs. There is no solution to these problems yet
+but in the next section, "what does the future hold", we discuss briefly
+what is expected in the near future in order to make it a little easier
+for developers aswell as for the users. \cite{dlf07}
 
 \subsection{What does the future hold?}
 %TODO How can strategies and method
@@ -321,17 +362,16 @@ adapted to the new approach of web services.\cite{dlf07} For the interested read
 200 web testing tools amongst others the ones that we have presented. \cite{softqa}
 
 
-\newpage
 \appendix
 
 \section{References}
 
-\begin{btSect}[alpha]{literature}
+\begin{btSect}[plain]{literature}
 \subsection{Articles \& books}
 \btPrintAll
 \end{btSect}
 
-\begin{btSect}[alpha]{websites}
+\begin{btSect}[plain]{websites}
 \subsection{Websites}
 \btPrintAll
 \end{btSect}
